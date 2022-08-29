@@ -30,7 +30,7 @@ FetchContent_Populate (
 	GIT_REPOSITORY https://github.com/eclipse/${EP_KEYPLE_SERVICE}.git
 	GIT_TAG        main #${KEYPLE_VERSION}
 	GIT_SHALLOW    ON
-	SOURCE_DIR     ../externals/${EP_KEYPLE_SERVICE}
+	SOURCE_DIR     ${CMAKE_SOURCE_DIR}/externals/${EP_KEYPLE_SERVICE}
 	UPDATE_DISCONNECTED ON
 )
 

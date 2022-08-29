@@ -18,6 +18,7 @@ IF(NOT Git_FOUND)
 	MESSAGE(FATAL_ERROR "Git not found!")
 ENDIF()
 
+
 # External Project
 INCLUDE(FetchContent)
 
@@ -30,7 +31,7 @@ FetchContent_Populate (
 	GIT_REPOSITORY https://github.com/calypsonet/${EP_CALYPSONET_TERMINAL_CALYPSO}.git
 	GIT_TAG        ${CALYPSONET_VERSION}
 	GIT_SHALLOW    ON
-	SOURCE_DIR     ../externals/${EP_CALYPSONET_TERMINAL_CALYPSO}
+	SOURCE_DIR     ${CMAKE_SOURCE_DIR}/externals/${EP_CALYPSONET_TERMINAL_CALYPSO}
 	UPDATE_DISCONNECTED ON
 )
 
